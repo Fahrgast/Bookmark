@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+}
+@media (min-width: 62em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid__main {
+  background-color: blue;
+}
+.grid__sidebar {
+  background-color: yellow;
+}
+@media (min-width: 500px) {
+  .grid {
+    box-sizing: border-box;
+  }
+}/*# sourceMappingURL=grid.css.map */

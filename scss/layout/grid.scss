@@ -1,0 +1,24 @@
+@use '../util/breakpoints' as u;
+
+.grid{
+    display: grid;
+
+
+    // Media min-width "large" 
+    @include u.breakpoint(large){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // Grid sup-classes
+    &__main{
+        background-color: blue;
+    }
+    &__sidebar{
+        background-color: yellow;
+    }
+
+    // media queries work inside class selections
+    @media (min-width: 500px){
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,36 @@
+@use '../util/' as u;
+
+:root{
+    /* Add font-family variables here */
+    --main-font: 'Alumni Sans Inline One', cursive;
+
+    --h1-font-size: 32;
+    --h2-font-size: 24;
+    --h3-font-size: 20;
+    --p-font-size: 16;
+}
+
+h1, h2, h3{
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+h1{
+    font-size: clamp(u.rem(var(--h1-font-size)), u.rem(16) + 2vw, u.rem(40));
+}
+h2{
+    font-size: clamp(u.rem(var(--h2-font-size)), u.rem(14) + 2vw, u.rem(36));
+}
+h3{
+    font-size: clamp(u.rem(var(--h3-font-size)), u.rem(12) + 2vw, u.rem(32));
+}
+
+p{
+    margin-top: 0;
+    font-size: u.rem(var(--p-font-size));
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+}
