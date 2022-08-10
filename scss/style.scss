@@ -2,8 +2,64 @@
 @forward 'layout';
 @forward 'util';
 
-h1{
-    color: var(--text-color);
+/* Global styles for this page */
+.content-wrapper{
+    max-width: 85%;
+    margin: auto;
+}
+.content-wrapper img{
+    max-width: 100%;
+}
+
+/* Hero Section */
+.hero{
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+
+    &__content-wrapper{
+        display: flex;
+        flex-direction: column;
+        min-height: 70vh;
+        height: 90%;
+    }
+
+    &__image{
+        justify-self: start;
+        position: relative;
+        left: -1rem;
+        width: 110%;
+        
+        margin-top: clamp(0rem, 0.5rem, 1rem);
+        margin-bottom: clamp(0rem, 1rem, 3rem);
+    }
+
+    &__ellipse{
+        background-color: var(--soft-blue);
+        width: 90%;
+        height: 80%;
+        position: absolute;
+        bottom: -1rem;
+        right: -2rem;
+        z-index: -1;
+        border-bottom-left-radius: 45%;
+    }
+
+    &__content{
+        margin-top: clamp(2rem, 2rem, 2rem);
+        text-align: center;
+    }
+
+    &__text{
+        
+    }
+
+    &__buttons{
+        
+    }
 }
 
 

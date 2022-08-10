@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body>
+    <div class="content-wrapper">
     <section class="hero">
       <header>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -59,12 +60,13 @@
         </nav>
       </header>
       <div class="hero__content-wrapper">
-        <div class="hero-image">
+        <div class="hero__image">
           <img src="images/illustration-hero.svg" alt="" />
+          <div class="hero__ellipse"></div>
         </div>
         <div class="hero__content">
-          <h1 id="headline">A Simple Bookmark Manager</h1>
-          <p id="hero__text">
+          <h1 class="hero__headline">A Simple Bookmark Manager</h1>
+          <p class="hero__text">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
@@ -230,6 +232,7 @@
         <button class="btn_blue">More Info</button>
       </section>
     </section>
+  </div>
     <section class="newsletter">
       <h3 class="newsletter__subheading">35,000+ already joined</h3>
       <h2 class="newsletter__heading">Stay up-to-date with what we’re doing</h2>

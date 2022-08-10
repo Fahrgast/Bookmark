@@ -21,9 +21,10 @@ body {
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.1;
   margin-top: 0;
+  color: var(--very-dark-blue);
 }
 
 h1 {
@@ -58,6 +59,19 @@ a, a:visited, a:active {
   --very-dark-blue: hsl(229, 31%, 21%);
 }
 
+.hero .btn-danger {
+  background-color: var(--soft-red);
+}
+
+.hero nav {
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.hero .nav-item .nav-link {
+  color: var(--very-dark-blue);
+}
+
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -66,18 +80,6 @@ a, a:visited, a:active {
 .navbar-light .navbar-toggler {
   border: none;
   padding-right: 0;
-}
-
-.hero .btn-danger {
-  background-color: var(--soft-red);
-}
-
-.hero nav {
-  text-transform: uppercase;
-}
-
-.hero .nav-item .nav-link {
-  color: var(--very-dark-blue);
 }
 
 .grid {
@@ -100,10 +102,53 @@ a, a:visited, a:active {
   }
 }
 
-h1 {
-  color: var(--text-color);
+/* Global styles for this page */
+.content-wrapper {
+  max-width: 85%;
+  margin: auto;
 }
 
+.content-wrapper img {
+  max-width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.hero__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  height: 90%;
+}
+.hero__image {
+  justify-self: start;
+  position: relative;
+  left: -1rem;
+  width: 110%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.hero__ellipse {
+  background-color: var(--soft-blue);
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  bottom: -1rem;
+  right: -2rem;
+  z-index: -1;
+  border-bottom-left-radius: 45%;
+}
+.hero__content {
+  margin-top: 2rem;
+  text-align: center;
+}
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 /*
 .navbar-dark .navbar-toggler-icon{
