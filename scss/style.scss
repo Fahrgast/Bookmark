@@ -1,5 +1,11 @@
 @forward 'globals';
 @forward 'layout';
+@forward 'util';
+
+h1{
+    color: var(--text-color);
+}
+
 
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 /*

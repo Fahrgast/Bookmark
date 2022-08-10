@@ -2,12 +2,7 @@
 
 :root{
     /* Add font-family variables here */
-    --main-font: 'Alumni Sans Inline One', cursive;
-
-    --h1-font-size: 32;
-    --h2-font-size: 24;
-    --h3-font-size: 20;
-    --p-font-size: 16;
+    --main-font: 'Rubik', cursive;
 }
 
 h1, h2, h3{
@@ -17,18 +12,22 @@ h1, h2, h3{
 }
 
 h1{
-    font-size: clamp(u.rem(var(--h1-font-size)), u.rem(16) + 2vw, u.rem(40));
+    // h1 fontsize - 32
+    font-size: clamp(u.rem(32), u.rem(16) + 2vw, u.rem(40));
 }
 h2{
-    font-size: clamp(u.rem(var(--h2-font-size)), u.rem(14) + 2vw, u.rem(36));
+    // h2 fontsize - 24
+    font-size: clamp(u.rem(24), u.rem(14) + 2vw, u.rem(36));
 }
 h3{
-    font-size: clamp(u.rem(var(--h3-font-size)), u.rem(12) + 2vw, u.rem(32));
+    // h3 fontsize - 20
+    font-size: clamp(u.rem(20), u.rem(12) + 2vw, u.rem(32));
 }
 
 p{
     margin-top: 0;
-    font-size: u.rem(var(--p-font-size));
+    // p fontsize - 18
+    font-size: u.rem(18);
 }
 
 a, a:visited, a:active{

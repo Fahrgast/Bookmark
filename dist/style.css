@@ -17,11 +17,7 @@ body {
 
 :root {
   /* Add font-family variables here */
-  --main-font: "Alumni Sans Inline One", cursive;
-  --h1-font-size: 32;
-  --h2-font-size: 24;
-  --h3-font-size: 20;
-  --p-font-size: 16;
+  --main-font: "Rubik", cursive;
 }
 
 h1, h2, h3 {
@@ -31,11 +27,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  font-size: clamp(2rem, 1rem + 2vw, 2.5rem);
 }
 
 h2 {
-  font-size: clamp(1.375rem, 0.875rem + 2vw, 2.25rem);
+  font-size: clamp(1.5rem, 0.875rem + 2vw, 2.25rem);
 }
 
 h3 {
@@ -44,7 +40,7 @@ h3 {
 
 p {
   margin-top: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 a, a:visited, a:active {
@@ -53,8 +49,35 @@ a, a:visited, a:active {
 
 :root {
   /* Add color variables here  */
-  --background-color: hsl(0, 0%, 11%);
-  --text-color: hsl(0, 0%, 100%);
+  --background-color: hsl(0, 0%, 100%);
+  --text-color: hsl(229, 8%, 60%);
+  /* Project Colors */
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-dark-blue: hsl(229, 31%, 21%);
+}
+
+/* Navbar Hamburger menu color - change RGB Values in url Link */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+  padding-right: 0;
+}
+
+.hero .btn-danger {
+  background-color: var(--soft-red);
+}
+
+.hero nav {
+  text-transform: uppercase;
+}
+
+.hero .nav-item .nav-link {
+  color: var(--very-dark-blue);
 }
 
 .grid {
@@ -75,6 +98,10 @@ a, a:visited, a:active {
   .grid {
     box-sizing: border-box;
   }
+}
+
+h1 {
+  color: var(--text-color);
 }
 
 /* Navbar Hamburger menu color - change RGB Values in url Link */
