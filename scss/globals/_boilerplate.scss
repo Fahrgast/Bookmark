@@ -9,6 +9,10 @@ html{
     box-sizing: inherit;
 }
 
+*:focus {
+    outline: 0 !important;
+}
+
 body{
     margin: 0;
     padding: 0;

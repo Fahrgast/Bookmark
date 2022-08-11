@@ -44,6 +44,8 @@
     border: none;
     border-radius: 5px;
 }
+
+
 /* ----- Global styles END ----- */
 
 
@@ -106,26 +108,34 @@
     padding-top: 3rem;
 
     &__list{
-        list-style-type: none;
         font-size: 1.3rem;
-        padding-left: 0;
         margin-bottom: 4rem;
         margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        &__item{
-            border-bottom: 1px solid hsla(229, 8%, 60%, 0.4);
+ 
+
+        &__button{
+            background-color: var(--white);
+            border: none;
             padding: 1rem 0;
-            position: relative;
+            border-bottom: 1px solid hsla(229, 8%, 60%, 0.4);
+            width: 100%;
+            outline: none;
+            color: var(--text-color);
         }
-
-        &__item:nth-of-type(1){
+        
+        &__button:nth-of-type(1){
             border-top: 1px solid hsla(229, 8%, 60%, 0.4);
         }
 
-        &__item:hover{
+        &__button:hover, &__button:active{
             color: var(--very-dark-blue);
+            
         }
-        &__item:hover::after{
+        &__button:hover::after{
             content: '';
             position: relative;
             left: 50%;
@@ -138,27 +148,30 @@
         }
     }
 
-    .feature_tabs{
-        .feature_tab{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            margin-bottom: 3rem;
     
-            &__image{
-                position: relative;
-            }
-    
-            &__content{
-                padding-top: 4rem;
-            }
-    
-            &__button{
-                padding: 0.75rem 2rem;
-            }
+    .feature_tab{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 3rem 0;
+        display: none;
+
+        &__image{
+            position: relative;
+        }
+
+        &__content{
+            padding-top: 4rem;
+        }
+
+        &__button{
+            padding: 0.75rem 2rem;
         }
     }
+    
 }
+
+
 /* ----- Feature Section END ----- */
 
 /* ----- Download Section START ----- */
@@ -209,6 +222,17 @@
 
 /* ----- FAQ Section START ----- */
 .faq{
+
+    /* Faq answer toggler coloring and rotate */
+    .active{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+
+    .active path{
+        stroke: var(--soft-red);
+    }
+    
     &__heading{
         padding-bottom: 1rem;
     }
@@ -219,7 +243,6 @@
         margin-top: 3rem;
         text-align: left;
 
-
         &__item{
             border-top: 1px solid hsla(229, 8%, 60%, 0.4);
             padding-top: 2rem;
@@ -228,10 +251,17 @@
                 display:flex;
                 justify-content: space-between;
                 align-items: center;
+
+                &__button{
+                    background-color: var(--background-color);
+                    border: none;
+                    transition: 0.5s;
+                }
             }
 
             &__answer{
                 padding: 2rem 0;
+                display: none;
             }
         }
         &__item:nth-of-type(1){
