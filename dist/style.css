@@ -108,6 +108,7 @@ a, a:visited, a:active {
 .content-wrapper {
   max-width: 85%;
   margin: auto;
+  text-align: center;
 }
 
 .content-wrapper img {
@@ -171,7 +172,6 @@ a, a:visited, a:active {
 }
 .hero__content {
   margin-top: 2rem;
-  text-align: center;
 }
 .hero__text {
   padding: 0.5rem 0;
@@ -194,7 +194,6 @@ a, a:visited, a:active {
 .features {
   display: flex;
   flex-direction: column;
-  text-align: center;
   padding-top: 3rem;
 }
 .features__list {
@@ -226,31 +225,169 @@ a, a:visited, a:active {
   background-color: var(--soft-red);
   bottom: -1rem;
 }
-
-.feature_tabs .feature_tab {
+.features .feature_tabs .feature_tab {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 3rem;
 }
-.feature_tabs .feature_tab__image {
+.features .feature_tabs .feature_tab__image {
   position: relative;
 }
-.feature_tabs .feature_tab__content {
+.features .feature_tabs .feature_tab__content {
   padding-top: 4rem;
 }
-.feature_tabs .feature_tab__button {
+.features .feature_tabs .feature_tab__button {
   padding: 0.75rem 2rem;
 }
 
-/* Navbar Hamburger menu color - change RGB Values in url Link */
-/*
-.navbar-dark .navbar-toggler-icon{
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* ----- Feature Section END ----- */
+/* ----- Download Section START ----- */
+.download {
+  max-width: 85%;
+  margin: auto;
+}
+.download .download_options_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.download .download_option_container {
+  box-shadow: 0 7px 5px hsla(229deg, 8%, 60%, 0.35);
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+.download .download_option_content {
+  padding-top: 2rem;
+}
+.download .download_option_content__image {
+  padding: 2rem 0;
+}
+.download .download_option_content__heading {
+  font-weight: 700;
+}
+.download .download_option_content__text {
+  padding-bottom: 1rem;
+  color: hsla(229deg, 8%, 60%, 0.75);
+}
+.download .download_option_content__dots {
+  width: 120%;
+  padding-bottom: 2rem;
+}
+.download .download_option_content__button {
+  margin-bottom: 2rem;
+  width: 80%;
 }
 
-.navbar-dark .navbar-toggler{
-    border: none;
-    padding-right: 0;
+/* ----- Download Section END ----- */
+/* ----- FAQ Section START ----- */
+.faq__heading {
+  padding-bottom: 1rem;
 }
-*//*# sourceMappingURL=style.css.map */
+.faq__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 3rem;
+  text-align: left;
+}
+.faq__list__item {
+  border-top: 1px solid hsla(229deg, 8%, 60%, 0.4);
+  padding-top: 2rem;
+}
+.faq__list__item__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq__list__item__answer {
+  padding: 2rem 0;
+}
+.faq__list__item:nth-of-type(1) {
+  border-top: none;
+}
+
+/* ----- FAQ Section END ----- */
+/* ----- Newsletter Section START ----- */
+.newsletter {
+  background-color: var(--soft-blue);
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.newsletter__content {
+  color: var(--white);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  max-width: 85%;
+  margin: auto;
+}
+.newsletter__content__subheading {
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+.newsletter__content__heading {
+  color: var(--white);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.newsletter__content__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.newsletter__content__form__email {
+  color: var(--black);
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.newsletter__content__form__email::-moz-placeholder {
+  color: hsla(229deg, 8%, 60%, 0.5);
+}
+.newsletter__content__form__email:-ms-input-placeholder {
+  color: hsla(229deg, 8%, 60%, 0.5);
+}
+.newsletter__content__form__email::placeholder {
+  color: hsla(229deg, 8%, 60%, 0.5);
+}
+.newsletter__content__form__button {
+  background-color: var(--soft-red);
+  margin-top: 1rem;
+}
+
+/* ----- Newsletter Section END ----- */
+/* ----- Footer Start ----- */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-blue);
+  align-items: center;
+  justify-content: center;
+}
+.footer__logo {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer__list {
+  list-style-type: none;
+  padding-left: 0;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.footer__list__item {
+  padding: 1rem 0;
+}
+.footer__socials {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.footer__socials__facebook {
+  padding-right: 2rem;
+}
+
+/* ----- Footer END ----- *//*# sourceMappingURL=style.css.map */
