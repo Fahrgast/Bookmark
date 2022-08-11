@@ -52,6 +52,8 @@ a, a:visited, a:active {
   /* Add color variables here  */
   --background-color: hsl(0, 0%, 100%);
   --text-color: hsl(229, 8%, 60%);
+  --white: white;
+  --black: black;
   /* Project Colors */
   --soft-blue: hsl(231, 69%, 60%);
   --soft-red: hsl(0, 94%, 66%);
@@ -74,7 +76,7 @@ a, a:visited, a:active {
 
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(37, 43, 70, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-toggler {
@@ -102,7 +104,7 @@ a, a:visited, a:active {
   }
 }
 
-/* Global styles for this page */
+/* ----- Global styles START ----- */
 .content-wrapper {
   max-width: 85%;
   margin: auto;
@@ -112,7 +114,39 @@ a, a:visited, a:active {
   max-width: 100%;
 }
 
-/* Hero Section */
+.ellipse {
+  background-color: var(--soft-blue);
+  width: 90%;
+  height: 80%;
+  position: absolute;
+}
+.ellipse__left {
+  bottom: -2rem;
+  left: -2rem;
+  z-index: -1;
+  border-bottom-right-radius: 45%;
+  border-top-right-radius: 80%;
+  width: 100%;
+  height: 95%;
+}
+.ellipse__right {
+  bottom: -1rem;
+  right: -2rem;
+  z-index: -1;
+  border-bottom-left-radius: 45%;
+}
+
+/* Blue button */
+.btn_blue {
+  background-color: var(--soft-blue);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ----- Global styles END ----- */
+/* ----- Hero Section START ----- */
 .hero {
   height: 100%;
   min-height: 80vh;
@@ -135,20 +169,80 @@ a, a:visited, a:active {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-.hero__ellipse {
-  background-color: var(--soft-blue);
-  width: 90%;
-  height: 80%;
-  position: absolute;
-  bottom: -1rem;
-  right: -2rem;
-  z-index: -1;
-  border-bottom-left-radius: 45%;
-}
 .hero__content {
   margin-top: 2rem;
   text-align: center;
 }
+.hero__text {
+  padding: 0.5rem 0;
+}
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.hero__buttons__firefox {
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 5px 5px hsla(229deg, 8%, 60%, 0.35);
+  color: var(--very-dark-blue);
+}
+
+/* ----- Hero Section END ----- */
+/* ----- Feature Section START ----- */
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 3rem;
+}
+.features__list {
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+.features__list__item {
+  border-bottom: 1px solid hsla(229deg, 8%, 60%, 0.4);
+  padding: 1rem 0;
+  position: relative;
+}
+.features__list__item:nth-of-type(1) {
+  border-top: 1px solid hsla(229deg, 8%, 60%, 0.4);
+}
+.features__list__item:hover {
+  color: var(--very-dark-blue);
+}
+.features__list__item:hover::after {
+  content: "";
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  display: block;
+  height: 3px;
+  background-color: var(--soft-red);
+  bottom: -1rem;
+}
+
+.feature_tabs .feature_tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.feature_tabs .feature_tab__image {
+  position: relative;
+}
+.feature_tabs .feature_tab__content {
+  padding-top: 4rem;
+}
+.feature_tabs .feature_tab__button {
+  padding: 0.75rem 2rem;
+}
+
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 /*
 .navbar-dark .navbar-toggler-icon{
