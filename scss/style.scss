@@ -308,6 +308,7 @@
             padding-top: 1rem;
             padding-bottom: 2rem;
         }
+        
         &__form{
             display: flex;
             flex-direction: column;
@@ -328,11 +329,43 @@
                 background-color: var(--soft-red);
                 margin-top: 1rem;
             }
+
+            .fieldset_active{
+                border: 2px solid var(--soft-red);
+                border-bottom: 2rem solid var(--soft-red);
+                position: relative;
+                border-radius: 5px;
+
+                legend{
+                    position: absolute;
+                    bottom: -2.3rem;
+                    left: -3rem;
+                    color: white;
+                    font-size: 0.9rem;
+                    font-style:italic;
+                    
+                }
+            }
+            .newsletter__content__form__error{
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                display: none;
+            }
+
+        }
+        .email_legend{
+            display: none;
         }
     }
 
 }
 /* ----- Newsletter Section END ----- */
+.newsletter__content__form__email{
+    width: 100%;
+}
+
+
 
 /* ----- Footer Start ----- */
 .footer{

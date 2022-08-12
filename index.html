@@ -410,12 +410,24 @@
           Stay up-to-date with what we’re doing
         </h2>
         <form class="newsletter__content__form" action="signup">
-          <input
-            class="newsletter__content__form__email"
-            type="email"
-            placeholder="Enter your email address"
-            required
-          />
+          <fieldset class="fieldset_email">
+            <input
+              class="newsletter__content__form__email"
+              type="email"
+              id="email_field"
+              placeholder="Enter your email address"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              required
+            />
+            <legend class="email_legend">
+              Whoops, make sure it's an email
+            </legend>
+            <img
+              class="newsletter__content__form__error"
+              src="images/icon-error.svg"
+              alt=""
+            />
+          </fieldset>
           <button class="newsletter__content__form__button btn_blue">
             Contact Us
           </button>

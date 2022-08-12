@@ -473,8 +473,35 @@ a, a:visited, a:active {
   background-color: var(--soft-red);
   margin-top: 1rem;
 }
+.newsletter__content__form .fieldset_active {
+  border: 2px solid var(--soft-red);
+  border-bottom: 2rem solid var(--soft-red);
+  position: relative;
+  border-radius: 5px;
+}
+.newsletter__content__form .fieldset_active legend {
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  color: white;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.newsletter__content__form .newsletter__content__form__error {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: none;
+}
+.newsletter__content .email_legend {
+  display: none;
+}
 
 /* ----- Newsletter Section END ----- */
+.newsletter__content__form__email {
+  width: 100%;
+}
+
 /* ----- Footer Start ----- */
 .footer {
   display: flex;
