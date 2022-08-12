@@ -45,7 +45,6 @@
     border-radius: 5px;
 }
 
-
 /* ----- Global styles END ----- */
 
 
@@ -166,6 +165,7 @@
 
         &__button{
             padding: 0.75rem 2rem;
+            margin-top: 2rem;
         }
     }
     
@@ -245,18 +245,23 @@
 
         &__item{
             border-top: 1px solid hsla(229, 8%, 60%, 0.4);
-            padding-top: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
 
             &__heading{
                 display:flex;
                 justify-content: space-between;
                 align-items: center;
-
+               
                 &__button{
                     background-color: var(--background-color);
                     border: none;
                     transition: 0.5s;
+                    
                 }
+            }
+            &__heading h3{
+                font-size: 1rem;
             }
 
             &__answer{
@@ -264,9 +269,12 @@
                 display: none;
             }
         }
-        &__item:nth-of-type(1){
-            border-top: none;
+        &__item:nth-of-type(4){
+            border-bottom: 1px solid hsla(229, 8%, 60%, 0.4);
         }
+    }
+    .faq_button{
+        margin-top: 2rem;
     }
 }
 /* ----- FAQ Section END ----- */
@@ -278,7 +286,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
     
     &__content{
         color: var(--white);
@@ -290,8 +298,9 @@
         &__subheading{
             text-transform: uppercase;
             color: var(--white);
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-size: 0.9rem;
+            font-weight: 400;
         }
 
         &__heading{
@@ -332,6 +341,7 @@
     background-color: var(--very-dark-blue);
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 
     &__logo{
         margin-top: 2.5rem; 
@@ -342,10 +352,16 @@
         list-style-type: none;
         padding-left: 0;
         text-transform: uppercase;
-        color: var(--white);
+        text-align: center;
 
         &__item{
             padding: 1rem 0;
+            font-weight: 400;
+            letter-spacing: 2px; 
+        }
+
+        &__item a{
+            color: var(--white);
         }
     }
 

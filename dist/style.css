@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -17,6 +18,9 @@ body {
   font-family: var(--main-font);
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 :root {
@@ -72,6 +76,7 @@ a, a:visited, a:active {
 .hero nav {
   text-transform: uppercase;
   padding: 2rem 0;
+  z-index: 3;
 }
 
 .hero .nav-item .nav-link {
@@ -88,14 +93,78 @@ a, a:visited, a:active {
   padding-right: 0;
 }
 
-.mobile_nav_active {
-  background-color: hsl(229deg, 31%, 21%);
+.mobile-nav-overlay {
+  background-color: hsla(229deg, 31%, 21%, 0.9);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  display: none;
+}
+.mobile-nav-overlay__menu {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.mobile-nav-overlay__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+.mobile-nav-overlay__list__item {
+  width: 80%;
+  padding: 1rem 0;
+  border-top: 1px solid hsla(229deg, 8%, 60%, 0.4);
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.mobile-nav-overlay__list__item__button {
+  width: 100%;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+.mobile-nav-overlay__list__item a {
+  color: var(--white);
+}
+.mobile-nav-overlay__socials {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mobile-nav-overlay__socials__fb {
+  margin-right: 2rem;
+}
+
+.mobile-nav-overlay-active {
+  display: block;
+}
+
+.mobile-nav-hidden {
+  display: none;
 }
 
 /* 
     TODO 
      1. Add mobile overlay
      2. Desktop design
+     3. Email stuff
 
 */
 .grid {
@@ -259,6 +328,7 @@ a, a:visited, a:active {
 }
 .features .feature_tab__button {
   padding: 0.75rem 2rem;
+  margin-top: 2rem;
 }
 
 /* ----- Feature Section END ----- */
@@ -323,7 +393,8 @@ a, a:visited, a:active {
 }
 .faq__list__item {
   border-top: 1px solid hsla(229deg, 8%, 60%, 0.4);
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .faq__list__item__heading {
   display: flex;
@@ -335,12 +406,18 @@ a, a:visited, a:active {
   border: none;
   transition: 0.5s;
 }
+.faq__list__item__heading h3 {
+  font-size: 1rem;
+}
 .faq__list__item__answer {
   padding: 2rem 0;
   display: none;
 }
-.faq__list__item:nth-of-type(1) {
-  border-top: none;
+.faq__list__item:nth-of-type(4) {
+  border-bottom: 1px solid hsla(229deg, 8%, 60%, 0.4);
+}
+.faq .faq_button {
+  margin-top: 2rem;
 }
 
 /* ----- FAQ Section END ----- */
@@ -351,7 +428,7 @@ a, a:visited, a:active {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
 }
 .newsletter__content {
   color: var(--white);
@@ -363,8 +440,9 @@ a, a:visited, a:active {
 .newsletter__content__subheading {
   text-transform: uppercase;
   color: var(--white);
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-size: 0.9rem;
+  font-weight: 400;
 }
 .newsletter__content__heading {
   color: var(--white);
@@ -404,6 +482,7 @@ a, a:visited, a:active {
   background-color: var(--very-dark-blue);
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 .footer__logo {
   margin-top: 2.5rem;
@@ -413,10 +492,15 @@ a, a:visited, a:active {
   list-style-type: none;
   padding-left: 0;
   text-transform: uppercase;
-  color: var(--white);
+  text-align: center;
 }
 .footer__list__item {
   padding: 1rem 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.footer__list__item a {
+  color: var(--white);
 }
 .footer__socials {
   padding-top: 1rem;
