@@ -2,13 +2,7 @@
 
 .grid{
     display: grid;
-
-
-    // Media min-width "large" 
-    @include u.breakpoint(large){
-        grid-template-columns: 1fr 1fr;
-    }
-
+    
     // Grid sup-classes
     &__main{
         background-color: blue;

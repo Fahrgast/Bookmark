@@ -1,18 +1,29 @@
+@use '../util/' as u;
+
 
 .hero .btn-danger{
     background-color: var(--soft-red) ;
+    padding: 0.25rem 1.25rem;
 }
 
 .hero nav{
     text-transform: uppercase;
     padding: 2rem 0;
     z-index: 3;
-    
+    align-items: center;
+}
+
+.hero .nav-item{
+    @include u.respond-to("medium"){
+        margin-left: 1.5rem;
+    } 
 }
 
 .hero .nav-item .nav-link{
-    color: var(--very-dark-blue);  
+    color: var(--very-dark-blue);
 }
+
+
 
 /* Navbar Hamburger menu color - change RGB Values in url Link */
 .navbar-light .navbar-toggler-icon{

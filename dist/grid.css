@@ -1,11 +1,6 @@
 .grid {
   display: grid;
 }
-@media (min-width: 62em) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 .grid__main {
   background-color: blue;
 }
