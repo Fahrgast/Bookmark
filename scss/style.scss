@@ -23,6 +23,7 @@
     width: 90%;
     height: 80%;
     position: absolute;
+    
 
     &__left{
         bottom: -2rem;
@@ -32,6 +33,13 @@
         border-top-right-radius: 80%;
         width: 100%;
         height: 95%;
+        
+
+        @include u.respond-to("medium"){
+            left: 0;
+            max-width: 80%;
+            max-height: 95%;
+        }
     }
 
     &__right{
@@ -45,6 +53,8 @@
         }
     }
 }
+
+
 
 /* Blue button */
 .btn_blue{
@@ -86,7 +96,7 @@
             text-align: left;
             height: auto;
             min-height: 0;
-            
+            width: 75vw;
             position: relative;
         }
     }
@@ -175,6 +185,10 @@
         @include u.respond-to("medium"){
             flex-direction: column;
             margin:auto;
+            position: relative;
+            width: 90vw;
+            left: -19%;
+           
         }
 
         &__expanders{
@@ -234,7 +248,6 @@
         }
     }
 
-    
     .feature_tab{
         display: flex;
         flex-direction: column;
@@ -244,24 +257,46 @@
 
         @include u.respond-to("medium"){
             flex-direction: row;
+            gap: 6rem;
         }
 
         &__image{
             position: relative;
+
+            @include u.respond-to("medium"){
+                flex: 1;
+                justify-content: center;
+            }
+        }
+
+        &__image img{
+            @include u.respond-to("medium"){
+                margin-left: 36%;
+            }
         }
 
         &__content{
             padding-top: 4rem;
+
+            @include u.respond-to("medium"){
+                flex: 1;
+                text-align: left;
+                margin-left: 5rem;
+            }
         }
 
         &__button{
             padding: 0.75rem 2rem;
             margin-top: 2rem;
+
+            @include u.respond-to("medium"){
+                margin-top: 1rem;
+            }
         }
     }
 
     .feature_tab_one{
-        display: block;
+        display: flex;
     }
     
 }
@@ -279,6 +314,11 @@
         flex-direction: column;
         justify-content: space-evenly;
         margin-bottom: 3rem;
+
+        @include u.respond-to("medium"){
+            flex-direction: row;
+            gap: 2rem;
+        }
     }
     
     .download_option_container{
@@ -312,11 +352,29 @@
             width: 80%;
         }
     }   
+    .download_option__two{
+        @include u.respond-to("medium"){
+            margin-top: 2rem;
+        }
+    }
+
+    .download_option__three{
+        @include u.respond-to("medium"){
+            margin-top: 4rem;
+        }
+    }
+
 }
+
+
 /* ----- Download Section END ----- */
 
 /* ----- FAQ Section START ----- */
 .faq{
+    @include u.respond-to("medium"){
+        max-width: 60%;
+        margin: auto;
+    }
 
     /* Faq answer toggler coloring and rotate */
     .active{
@@ -382,13 +440,18 @@
     flex-direction: column;
     text-align: center;
     max-width: 100%;
-    
+
     &__content{
         color: var(--white);
         padding-top: 5rem;
         padding-bottom: 3rem;
         max-width: 85%;
         margin: auto;
+
+        @include u.respond-to("medium"){
+            max-width: 40%;
+            margin: auto;
+        }
 
         &__subheading{
             text-transform: uppercase;
@@ -409,11 +472,21 @@
             flex-direction: column;
             justify-content: space-around;
 
+            @include u.respond-to("medium"){
+               flex-direction: row;
+               justify-content: center;
+               gap: 2rem;
+            }
+
             &__email{
                 color: var(--black);
                 padding: 0.75rem 1rem;
                 border: none;
                 border-radius: 5px;
+                
+                @include u.respond-to("medium"){
+                    padding-right: 8rem;
+                }      
             }
 
             &__email::placeholder{
@@ -423,6 +496,21 @@
             &__button{
                 background-color: var(--soft-red);
                 margin-top: 1rem;
+
+                @include u.respond-to("medium"){
+                    margin-top: 0;
+                    padding: 0 2rem;
+                    font-weight: 700;
+                }
+            }
+
+            .email_error__button{
+                @include u.respond-to("medium"){
+                    background-color: var(--white);
+                    color: var(--soft-red);
+                    border: 2px solid var(--soft-red);
+                    margin-bottom: 2rem;
+                }
             }
 
             .newsletter__content__form__email{
@@ -433,7 +521,7 @@
                 border: 2px solid var(--soft-red);
                 border-bottom: 2rem solid var(--soft-red);
                 position: relative;
-                border-radius: 5px;
+                border-radius: 5px; 
 
                 legend{
                     position: absolute;
@@ -449,7 +537,7 @@
                 position: absolute;
                 right: 1rem;
                 top: 1rem;
-                display: none !important;
+                display: none;
             }
 
         }
@@ -466,41 +554,68 @@
 
 /* ----- Footer Start ----- */
 .footer{
-    display: flex;
-    flex-direction: column;
     background-color: var(--very-dark-blue);
-    align-items: center;
-    justify-content: center;
     max-width: 100%;
 
-    &__logo{
-        margin-top: 2.5rem; 
-        margin-bottom: 1.5rem;
-    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 75%;
+        margin: auto;
 
-    &__list{
-        list-style-type: none;
-        padding-left: 0;
-        text-transform: uppercase;
-        text-align: center;
-
-        &__item{
-            padding: 1rem 0;
-            font-weight: 400;
-            letter-spacing: 2px; 
+        @include u.respond-to("medium"){
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    
+        &__logo{
+            margin-top: 2.5rem; 
+            margin-bottom: 1.5rem;
         }
 
-        &__item a{
-            color: var(--white);
+        &__list{
+            list-style-type: none;
+            padding-left: 0;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include u.respond-to("medium"){
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            &__item{
+                padding: 1rem 0;
+                font-weight: 400;
+                letter-spacing: 2px; 
+
+                @include u.respond-to("medium"){
+                    margin-left: 4rem;
+                    margin-top: 1.5rem;
+                    color: var(--text-color);
+                }
+            }
+
+            &__item a{
+                color: var(--white);
+            }
         }
-    }
 
-    &__socials{
-        padding-top: 1rem;
-        padding-bottom: 3rem;
+        &__socials{
+            padding-top: 1rem;
+            padding-bottom: 3rem;
 
-        &__facebook{
-            padding-right: 2rem;
+            @include u.respond-to("medium"){
+                margin-top: 1.5rem;
+            }
+
+            &__facebook{
+                padding-right: 2rem;
+            }
         }
     }
 }

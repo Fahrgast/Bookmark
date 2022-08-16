@@ -28,10 +28,10 @@ for (let i = 0; i < acc.length; i++) {
     var panel = document.querySelectorAll(".feature_tab");
     for(let x = 0; x < acc.length; x++){
       if(x === i){
-        if (panel[i].style.display === "block") {
+        if (panel[i].style.display === "flex") {
           panel[i].style.display = "none";
         } else {
-          panel[i].style.display = "block";
+          panel[i].style.display = "flex";
         }
       }else{
         panel[x].style.display = "none";
@@ -58,19 +58,27 @@ for (let x = 0; x < toggler.length; x++) {
       });
     }
 
+
+/* ----- Newsletter Error handling ----- */
 const error_message = document.querySelector(".fieldset_email");
 const error_icon = document.querySelector(".newsletter__content__form__error");
 const input = document.querySelector(".newsletter__content__form__email");
 const submit = document.querySelector(".newsletter__content__form");
 const email_legend = document.querySelector(".email_legend");
+const error_button = document.querySelector(".newsletter__content__form__button");
 
 input.addEventListener('invalid', function (event) {
   event.preventDefault();
+  /* 
+    In case of an invalid input, toggle "fieldset_active" class which 
+    shows creates the wanted design 
+  */
   if(!error_message.classList.contains("fieldset_active"))
   {
     error_message.classList.toggle("fieldset_active");
     error_icon.style.display = "block";
     email_legend.style.display = "block";
+    error_button.classList.toggle("email_error__button");
   } 
 })
 
@@ -83,9 +91,12 @@ submit.addEventListener('submit', function(event){
     error_message.classList.toggle("fieldset_active");
     error_icon.style.display = "block";
     email_legend.style.display = "none";
+    error_button.classList.toggle("email_error__button");
   } 
   alert("Thanks for contacting us!");
 })
+
+
 
 
 
